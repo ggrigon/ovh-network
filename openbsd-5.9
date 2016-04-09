@@ -1,0 +1,5 @@
+inet IP.FAIL.OVER 255.255.255.255 IP.FAIL.OVER
+!sleep 10
+!route add -inet YOUR.IP.254/32 -link -iface em0
+!route add default YOUR.IP.254
+

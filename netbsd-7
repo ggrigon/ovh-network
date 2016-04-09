@@ -1,0 +1,5 @@
+/etc/ifconfig.wm0
+inet IP.FAIL.OVER 255.255.255.255 IP.FAIL.OVER
+!route add -net YOUR.IP.254/32 -cloning -link wm0 -iface
+!sleep 10
+!route add default -ifa IP.FAIL.OVER YOUR.IP.254

@@ -1,0 +1,8 @@
+iface eth0 inet static
+        address IP.FAIL.OVER
+        netmask 255.255.255.255
+        broadcast IP.FAIL.OVER
+        post-up route add YOU.IP.254 dev eth0
+        post-up route add default gw YOU.IP.254
+        post-down route del YOU.IP.254 dev eth0
+        post-down route del default gw YOU.IP.254
